@@ -1,0 +1,21 @@
+Problem 1 - Two Sum in JAVA 
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        for(int i=0; i<nums.length - 1; i++ ){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i] + nums[j]==target){
+                    return new int[] {i,j};
+                }
+            } 
+        }
+        throw new IllegalArgumentException("Sum not calculate.");
+    }
+    public static void main(String args[]){
+        Solution sol = new Solution();
+        int nums[] = {2,7,11,15};
+        int target = 9;
+        int index[] = sol.twoSum(nums,target);
+        System.out.println("["+index[0]+","+index[1]+"]");
+    }
+}
